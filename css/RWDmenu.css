@@ -64,8 +64,14 @@
           transform: rotate(-45deg);
       }
 
-      @media (max-width: 47.999em) {
+      @media (max-width: 976em) {
 
+        .custom-menu-3 {
+            text-align: left;
+        }
 
+        .custom-toggle {
+            display: block;
+        }
 
-      }
+    }
