@@ -13,50 +13,7 @@
     <link href="css/grids-responsive-min.css" rel="stylesheet" />
     <link href="css/pure-min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
-    <script type="text/javascript">
-      jssor_1_slider_init = function() {
-
-        var jssor_1_SlideshowTransitions = [
-          {$Duration:1200,$Opacity:2}
-        ];
-
-        var jssor_1_options = {
-          $AutoPlay: true,
-          $SlideshowOptions: {
-            $Class: $JssorSlideshowRunner$,
-            $Transitions: jssor_1_SlideshowTransitions,
-            $TransitionsOrder: 1
-          },
-          $ArrowNavigatorOptions: {
-            $Class: $JssorArrowNavigator$
-          },
-          $BulletNavigatorOptions: {
-            $Class: $JssorBulletNavigator$
-          }
-        };
-
-        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-        /*responsive code begin*/
-        /*you can remove responsive code if you don't want the slider scales while window resizing*/
-        function ScaleSlider() {
-            var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-            if (refSize) {
-                refSize = Math.min(refSize, 600);
-                jssor_1_slider.$ScaleWidth(refSize);
-            }
-            else {
-                window.setTimeout(ScaleSlider, 30);
-            }
-        }
-        ScaleSlider();
-        $Jssor$.$AddEvent(window, "load", ScaleSlider);
-        $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-        $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-        /*responsive code end*/
-      };
-    </script>
-    <style type="text/css">
+        <style type="text/css">
       body {
         margin: 0px;
         padding: 0px;
@@ -156,43 +113,43 @@
     </div>
     <script>
     (function (window, document) {
-    var menu = document.getElementById('menu'),
-        WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
+      var menu = document.getElementById('menu'),
+          WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
 
-    function toggleHorizontal() {
-        [].forEach.call(
-            document.getElementById('menu').querySelectorAll('.custom-can-transform'),
-            function(el){
-                el.classList.toggle('pure-menu-horizontal');
-            }
-        );
-    };
+      function toggleHorizontal() {
+          [].forEach.call(
+              document.getElementById('menu').querySelectorAll('.custom-can-transform'),
+              function(el){
+                  el.classList.toggle('pure-menu-horizontal');
+              }
+          );
+      };
 
-    function toggleMenu() {
-        // set timeout so that the panel has a chance to roll up
-        // before the menu switches states
-        if (menu.classList.contains('open')) {
-            setTimeout(toggleHorizontal, 500);
-        }
-        else {
-            toggleHorizontal();
-        }
-        menu.classList.toggle('open');
-        document.getElementById('toggle').classList.toggle('x');
-    };
+      function toggleMenu() {
+          // set timeout so that the panel has a chance to roll up
+          // before the menu switches states
+          if (menu.classList.contains('open')) {
+              setTimeout(toggleHorizontal, 500);
+          }
+          else {
+              toggleHorizontal();
+          }
+          menu.classList.toggle('open');
+          document.getElementById('toggle').classList.toggle('x');
+      };
 
-    function closeMenu() {
-        if (menu.classList.contains('open')) {
-            toggleMenu();
-        }
-    }
+      function closeMenu() {
+          if (menu.classList.contains('open')) {
+              toggleMenu();
+          }
+      }
 
-    document.getElementById('toggle').addEventListener('click', function (e) {
-        toggleMenu();
-        e.preventDefault();
-    });
+      document.getElementById('toggle').addEventListener('click', function (e) {
+          toggleMenu();
+          e.preventDefault();
+      });
 
-    window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
+      window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
     })(this, this.document);
 
     </script>
@@ -340,10 +297,10 @@
               <span class="intro">君の名は</span>
             </div>
             <a href="homepage/ChineseBook/product01.html">
-            <div class="centerItem">
-              <img src="img/isekai.jpg"><br/>
-              <span class="intro">異世界藥局 01</span>
-            </div>
+              <div class="centerItem">
+                <img src="img/isekai.jpg"><br/>
+                <span class="intro">異世界藥局 01</span>
+              </div>
             </a>
             <div class="centerItemE">
               <img src="img/kiminonawaC.jpg"><br/>
@@ -466,5 +423,48 @@
   </div>
 
 </body>
+<script type="text/javascript">
+  jssor_1_slider_init = function() {
+
+    var jssor_1_SlideshowTransitions = [
+      {$Duration:1200,$Opacity:2}
+    ];
+
+    var jssor_1_options = {
+      $AutoPlay: true,
+      $SlideshowOptions: {
+        $Class: $JssorSlideshowRunner$,
+        $Transitions: jssor_1_SlideshowTransitions,
+        $TransitionsOrder: 1
+      },
+      $ArrowNavigatorOptions: {
+        $Class: $JssorArrowNavigator$
+      },
+      $BulletNavigatorOptions: {
+        $Class: $JssorBulletNavigator$
+      }
+    };
+
+    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+    /*responsive code begin*/
+    /*you can remove responsive code if you don't want the slider scales while window resizing*/
+    function ScaleSlider() {
+        var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+        if (refSize) {
+            refSize = Math.min(refSize, 600);
+            jssor_1_slider.$ScaleWidth(refSize);
+        }
+        else {
+            window.setTimeout(ScaleSlider, 30);
+        }
+    }
+    ScaleSlider();
+    $Jssor$.$AddEvent(window, "load", ScaleSlider);
+    $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+    $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+    /*responsive code end*/
+  };
+</script>
 <script type="text/javascript">jssor_1_slider_init();</script>
 </html>
