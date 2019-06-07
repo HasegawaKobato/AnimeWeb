@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動漫周邊購物網 - 首頁</title>
+    <link href="../../css/frame.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/hover.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/RWD.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/RWDmenu.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/grids-responsive-min.css" rel="stylesheet" />
+    <link href="../../css/pure-min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+
+    <style type="text/css">
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+    @media (max-width: 976em) {
+
+        .custom-menu-3 {
+            text-align: left;
+        }
+
+        .custom-toggle {
+            display: block;
+        }
+
+    }
+    </style>
+
+    <script type="text/javascript" src="JsScript.js"></script>
+
+  </head>
+
+<body>
+  <div class="RWDmenu">
+    <div class="custom-wrapper pure-g" id="menu">
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pure-menu">
+                <a href="../../index.html" class="pure-menu-heading custom-brand" style="font-family: 'Bad Script', cursive;">Anime</a>
+                <a href="#" class="custom-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pure-menu pure-menu-horizontal custom-can-transform">
+                <ul class="pure-menu-list">
+                  <li class="pure-menu-item"><a href="../../homepage/login.html" class="pure-menu-link">登入會員</a></li>
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">全站分類</a></li>
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">特殊專區</a></li>
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">熱門排行</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="../../homepage/member.html" class="pure-menu-link">會員專區</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">客服中心</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">討論區</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function (window, document) {
+    var menu = document.getElementById('menu'),
+        WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
+
+    function toggleHorizontal() {
+        [].forEach.call(
+            document.getElementById('menu').querySelectorAll('.custom-can-transform'),
+            function(el){
+                el.classList.toggle('pure-menu-horizontal');
+            }
+        );
+    };
+
+    function toggleMenu() {
+        // set timeout so that the panel has a chance to roll up
+        // before the menu switches states
+        if (menu.classList.contains('open')) {
+            setTimeout(toggleHorizontal, 500);
+        }
+        else {
+            toggleHorizontal();
+        }
+        menu.classList.toggle('open');
+        document.getElementById('toggle').classList.toggle('x');
+    };
+
+    function closeMenu() {
+        if (menu.classList.contains('open')) {
+            toggleMenu();
+        }
+    }
+
+    document.getElementById('toggle').addEventListener('click', function (e) {
+        toggleMenu();
+        e.preventDefault();
+    });
+
+    window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
+    })(this, this.document);
+
+    </script>
+  </div>
+  <div class="line"></div>
+
+  <div class="html">
+
+    <div class="header">
+      <div class="menu">
+        <ul>
+          <li class="menuItem1"><a href="../../index.html" class="menuLink">首頁<br/>Home</a></li>
+          <li class="menuItem2"><a href="../../homepage/login.html" class="menuLink">登入<br/>Login</a></li>
+          <li class="menuItem2"><a href="../../homepage/member.html" class="menuLink">會員專區<br/>Member Only</a></li>
+          <li class="menuItem2">客服中心<br/>Customer Service</li>
+          <li class="menuItem3">討論區<br/>Forum</li>
+        </ul>
+      </div>
+      <div class="logoArea">
+        <div class="headerLogo"><a href="../../index.html" class="home">Anime</a>
+        </div>
+        <div class="headerNear">
+          <div class="searchField">
+            <img src="../../img/search.png" style="width:15px;"><input type="text" name="search" class="search">
+            <select>
+              <option>中文書</option>
+              <option>日文書</option>
+              <option>畫冊</option>
+              <option>DVD</option>
+              <option>CD</option>
+              <option>模型</option>
+              <option>海報</option>
+              <option>其他周邊</option>
+            </select>
+            <input type="button" value="搜尋">
+          </div>
+        </div>
+      </div>
+      <div class="itemType">
+        <ul>
+          <li>中文書</li>
+          <li>日文書</li>
+          <li>畫冊</li>
+          <li>ＤＶＤ</li>
+          <li>ＣＤ</li>
+          <li>模型</li>
+          <li>海報</li>
+          <li>其他周邊</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="RWDsearchField">
+      <img src="../../img/search.png" style="width:15px;"><input type="text" name="search" class="search">
+      <select>
+        <option>中文書</option>
+        <option>日文書</option>
+        <option>畫冊</option>
+        <option>DVD</option>
+        <option>CD</option>
+        <option>模型</option>
+        <option>海報</option>
+        <option>其他周邊</option>
+      </select>
+      <input type="button" value="搜尋">
+    </div>
+
+    <div class="body">
+      <div class="left">
+        <div class="Column">
+          <p>中文書</p>
+          <ul class="sort">
+            <li>依類型分類<span class="dottedEffect"> ●</span>
+              <ul class="type">
+                <li>小說<span class="dottedEffect"> ●</span></li>
+                <li>漫畫<span class="dottedEffect"> ●</span></li>
+              </ul>
+            </li>
+            <li style="color:#00F;font-weight:bold;">依題材分類<span class="dottedEffect"> ●</span>
+              <ul class="type">
+                <li>武俠<span class="dottedEffect"> ●</span></li>
+                <li>推理<span class="dottedEffect"> ●</span></li>
+                <li>歷史<span class="dottedEffect"> ●</span></li>
+                <li>言情<span class="dottedEffect"> ●</span></li>
+                <li>科幻<span class="dottedEffect"> ●</span></li>
+                <li style="color:#00F;font-weight:bold;">奇幻<span class="dottedEffect"> ●</span></li>
+                <li>玄幻<span class="dottedEffect"> ●</span></li>
+                <li>冒險<span class="dottedEffect"> ●</span></li>
+                <li>恐怖<span class="dottedEffect"> ●</span></li>
+                <li>架空<span class="dottedEffect"> ●</span></li>
+                <li>網遊<span class="dottedEffect"> ●</span></li>
+                <li>修真<span class="dottedEffect"> ●</span></li>
+                <li>穿越<span class="dottedEffect"> ●</span></li>
+                <li>教育<span class="dottedEffect"> ●</span></li>
+                <li>色情<span class="dottedEffect"> ●</span></li>
+                <li>電影<span class="dottedEffect"> ●</span></li>
+                <li>百合<span class="dottedEffect"> ●</span></li>
+                <li>耽美<span class="dottedEffect"> ●</span></li>
+                <li>軍事<span class="dottedEffect"> ●</span></li>
+                <li>政治<span class="dottedEffect"> ●</span></li>
+                <li>其他<span class="dottedEffect"> ●</span></li>
+              </ul>
+            </li>
+            <li>依出版社分類<span class="dottedEffect"> ●</span>
+              <ul class="type">
+                <li>台灣角川<span class="dottedEffect"> ●</span></li>
+                <li>尖端<span class="dottedEffect"> ●</span></li>
+                <li>東立<span class="dottedEffect"> ●</span></li>
+                <li>青文<span class="dottedEffect"> ●</span></li>
+                <li>奇幻基地<span class="dottedEffect"> ●</span></li>
+                <li>銘顯文化<span class="dottedEffect"> ●</span></li>
+                <li>大賣文化<span class="dottedEffect"> ●</span></li>
+                <li>傑克魔豆<span class="dottedEffect"> ●</span></li>
+                <li>三采文化<span class="dottedEffect"> ●</span></li>
+                <li>四季國際<span class="dottedEffect"> ●</span></li>
+                <li>台灣東販<span class="dottedEffect"> ●</span></li>
+                <li>愛米粒<span class="dottedEffect"> ●</span></li>
+                <li>飛魚創意<span class="dottedEffect"> ●</span></li>
+                <li>鮮文學網<span class="dottedEffect"> ●</span></li>
+                <li>春天<span class="dottedEffect"> ●</span></li>
+                <li>天使<span class="dottedEffect"> ●</span></li>
+                <li>威向文化<span class="dottedEffect"> ●</span></li>
+                <li>綠林寮<span class="dottedEffect"> ●</span></li>
+                <li>大翼文化<span class="dottedEffect"> ●</span></li>
+                <li>三日月書版<span class="dottedEffect"> ●</span></li>
+                <li>麥田<span class="dottedEffect"> ●</span></li>
+                <li>知翎<span class="dottedEffect"> ●</span></li>
+                <li>普天出版家族<span class="dottedEffect"> ●</span></li>
+                <li>蓋亞文化<span class="dottedEffect"> ●</span></li>
+                <li>其他<span class="dottedEffect"> ●</span></li>
+              </ul>
+            </li>
+            <li>其他分類<span class="dottedEffect"> ●</span>
+          <ul>
+        </div>
+      </div>
+
+      <div class="center">
+        <div class="bookName">異世界藥局 01</div>
+        <div class="remarks">
+          　　他擁有前世所累積的現代藥學知識，搭配上在異世界得到的作弊能力「物質創造＆物質消除」。
+        </div>
+        <div class="bookCot">
+          <div class="bookImg"><img src="../../img/isekai.jpg"></div>
+          <div class="bookData">
+            <table border="0" class="bookInfo">
+              <tr>
+                <td style="width:70px;">作者</td><td style="width:10px;">：</td>
+                <td>高山理図（keepout）<input type="button" value="追蹤"></td>
+              </tr>
+              <tr>
+                <td>譯者</td><td>：</td>
+                <td>張以潤</td>
+              </tr>
+              <tr>
+                <td>繪師</td><td>：</td>
+                <td>keepout</td>
+              </tr>
+              <tr>
+                <td>出版社</td><td>：</td>
+                <td>東立　<input type="button" value="出版社追蹤"></td>
+              </tr>
+              <tr>
+                <td>出版日</td><td>：</td>
+                <td>2016/10/24</td>
+              </tr>
+              <tr>
+                <td>ISBN</td><td>：</td>
+                <td>9789864820863</td>
+              </tr>
+              <tr>
+                <td>適讀年齡</td><td>：</td>
+                <td>全齡適讀</td>
+              </tr>
+            </table>
+            <table border="0" class="bookPrice">
+              <tr>
+                <td style="width:70px;">定價</td><td style="width:10px;">：</td><td><span style="text-decoration: line-through;">240</span>元</td>
+              </tr>
+              <tr>
+                <td>特價</td><td>：</td><td><span class="discount">85 </span> 折 <span class="discounted">204</span> 元</td>
+              </tr>
+              <tr>
+                <td>紅利可抵</td><td>：</td><td><b>6</b>元</td>
+              </tr>
+              <tr>
+                <td>運送方式</td><td>：</td><td>全球配送　香港到店<br/>國內宅配　國內店取</td>
+              </tr>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="IntField">
+          <div class="fieldName">內容簡介</div>
+          <div class="fieldCot">
+            一名年輕的藥學學者，因為過於熱衷研究，導致他還壯志未酬就過勞死。<br/>
+            而他張開眼睛之後，竟發現自己轉世成了專為王公貴族診療的宮廷藥師名門德‧麥第奇家之子――法馬。然而，法馬對這個充斥錯誤的療法、調劑法，甚至還橫行著稱不上醫療行為的咒法和巫術的世界絕望至極。「不想想辦法不行啊……至少要為這個世界的人們著想――」<br/>
+            他擁有前世所累積的現代藥學知識，搭配上在異世界得到的作弊能力「物質創造＆物質消除」。<br/>
+            法馬運用這些知識和能力，面對媽媽的腰痛到女王的絕症等等……各種疑難雜症。<br/>
+            接著，他與「認為應將真正有效的藥品提供給每一個人」的奴婢少女珞緹、以及美女家教艾倫等人，開設了「異世界藥局」。而法馬訂下的目標則是──<br/>
+          </div>
+        </div>
+        <div class="IntField">
+          <div class="fieldName">詳細資料</div>
+          <div class="fieldCot">
+            編／譯者：張以潤<br/>
+            語言：中文繁體<br/>
+            規格：平裝<br/>
+            分級：普級<br/>
+            開數：32開13*19cm<br/><br/>
+            出版地：台灣<br/>
+          </div>
+        </div>
+        <div class="IntField">
+          <div class="fieldName">購物說明</div>
+          <div class="fieldCot">
+            <div class="subtitle">商品運送說明：</div>
+            <ul>
+              <li>當商品送達金石堂門市或便利商店後，您會收到E-mail通知，您也可透過【訂單查詢】確認到貨情況。</li>
+              <li>並請您於指定期限內付款取件，若逾期未取，您取貨的金石堂門市或便利商店將辦理退貨作業。</li>
+              <li>商品內容物以實物為主，網站圖片僅供參考。</li>
+            </ul>
+            <div class="subtitle">退換貨說明：</div>
+            <ul>
+              <li>依照消費者保護法的規定，享有商品取貨日起七天鑑賞期的權益。</li>
+              <li>商品若有不滿意／瑕疵／錯誤，請您於鑑賞期七日內辦理退貨。</li>
+              <li>辦理退換貨時，商品必須是全新狀態與完整包裝。<br/>
+                <span class="subRemarks">　　※請注意保持商品本體、配件、贈品、保證書、原廠包裝及所有附隨文件或資料的完整性，切勿缺漏任何配件或損毀原廠外盒。</span>
+              </li>
+              <li>退回商品無法回復原狀者，恐將影響退貨權益或需負擔部分費用。</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="right">
+        <div class="Column">
+          <p>看過這個的人，也看過......</p>
+
+          <div class="item interval">
+            <img src="../../img/kiminonawaC.jpg"><br/>
+            <span class="intro">你的名字</span>
+          </div>
+          <div class="item interval">
+            <img src="../../img/konosubaC.jpg"><br/>
+            <span class="intro">為美好的世界獻上祝福 08</span>
+          </div>
+          <div class="item interval">
+            <img src="../../img/kuzuC.jpg"><br/>
+            <span class="intro">人渣的本願 06</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="root">
+      <div class="footLogo"><a href="../../index.html" class="home">Anime</a>
+      </div>
+      <div class="features">
+        <div class="link">
+          <ul>
+            <li><a href="../../index.html" class="rootLink">首頁</a></li>
+            <li>關於</li>
+            <li>客服中心</li>
+            <li>討論區</li>
+          </ul>
+        </div>
+        <div class="ourInfo">
+          <p>專線：02-23456789</p>
+          <p>地址：台北市中正區濟南路一段321號</p><br/>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:12px;">動漫周邊購物網　&copy;Anime Shopping site.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

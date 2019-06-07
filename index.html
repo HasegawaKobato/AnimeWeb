@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動漫周邊購物網 - 首頁</title>
+    <link href="css/frame.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/hover.css" rel="stylesheet" type="text/css" />
+    <link href="css/form.css" rel="stylesheet" type="text/css" />
+    <link href="css/RWD.css" rel="stylesheet" type="text/css" />
+    <link href="css/RWDmenu.css" rel="stylesheet" type="text/css" />
+    <link href="css/grids-responsive-min.css" rel="stylesheet" />
+    <link href="css/pure-min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+    <style type="text/css">
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+    @media (max-width: 976em) {
+
+        .custom-menu-3 {
+            text-align: left;
+        }
+
+        .custom-toggle {
+            display: block;
+        }
+
+    }
+    </style>
+
+    <script type="text/javascript" src="JsScript.js"></script>
+
+  </head>
+
+<body>
+  <div class="RWDmenu">
+    <div class="custom-wrapper pure-g" id="menu">
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pure-menu">
+                <a href="index.html" class="pure-menu-heading custom-brand" style="font-family: 'Bad Script', cursive;">Anime</a>
+                <a href="#" class="custom-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pure-menu pure-menu-horizontal custom-can-transform">
+                <ul class="pure-menu-list">
+                  <li class="pure-menu-item"><a href="homepage/login.html" class="pure-menu-link">登入會員</a></li>
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">全站分類</a></li>
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">特殊專區</a></li>
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">熱門排行</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="homepage/member.html" class="pure-menu-link">會員專區</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">客服中心</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">討論區</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function (window, document) {
+    var menu = document.getElementById('menu'),
+        WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
+
+    function toggleHorizontal() {
+        [].forEach.call(
+            document.getElementById('menu').querySelectorAll('.custom-can-transform'),
+            function(el){
+                el.classList.toggle('pure-menu-horizontal');
+            }
+        );
+    };
+
+    function toggleMenu() {
+        // set timeout so that the panel has a chance to roll up
+        // before the menu switches states
+        if (menu.classList.contains('open')) {
+            setTimeout(toggleHorizontal, 500);
+        }
+        else {
+            toggleHorizontal();
+        }
+        menu.classList.toggle('open');
+        document.getElementById('toggle').classList.toggle('x');
+    };
+
+    function closeMenu() {
+        if (menu.classList.contains('open')) {
+            toggleMenu();
+        }
+    }
+
+    document.getElementById('toggle').addEventListener('click', function (e) {
+        toggleMenu();
+        e.preventDefault();
+    });
+
+    window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
+    })(this, this.document);
+
+    </script>
+  </div>
+  <div class="line"></div>
+
+  <div class="html">
+
+    <div class="header">
+      <div class="menu">
+        <ul>
+          <li class="menuItem1"><a href="index.html" class="menuLink">首頁<br/>Home</a></li>
+          <li class="menuItem2"><a href="homepage/login.html" class="menuLink">登入<br/>Login</a></li>
+          <li class="menuItem2"><a href="homepage/member.html" class="menuLink">會員專區<br/>Member Only</a></li>
+          <li class="menuItem2">客服中心<br/>Customer Service</li>
+          <li class="menuItem3">討論區<br/>Forum</li>
+        </ul>
+      </div>
+      <div class="logoArea">
+        <div class="headerLogo"><a href="index.html" class="home">Anime</a>
+        </div>
+        <div class="headerNear">
+          <div class="searchField">
+            <img src="img/search.png" style="width:15px;"><input type="text" name="search" class="search">
+            <select>
+              <option>中文書</option>
+              <option>日文書</option>
+              <option>畫冊</option>
+              <option>DVD</option>
+              <option>CD</option>
+              <option>模型</option>
+              <option>海報</option>
+              <option>其他周邊</option>
+            </select>
+            <input type="button" value="搜尋">
+          </div>
+        </div>
+      </div>
+      <div class="itemType">
+        <ul>
+          <li>中文書</li>
+          <li>日文書</li>
+          <li>畫冊</li>
+          <li>ＤＶＤ</li>
+          <li>ＣＤ</li>
+          <li>模型</li>
+          <li>海報</li>
+          <li>其他周邊</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="body">
+      <div class="left">
+        <div class="Column">
+          <p>專區</p>
+          <div class="item">
+            <img src="img/specialLL.png" style="width:100%;">
+            <span class="intro">LoveLive</span>
+          </div>
+          <div class="item interval">
+          <img src="img/specialSAO.png" style="width:100%;">
+          <span class="intro">刀劍神域<br/>Sword Art Online</span>
+          </div>
+          <span style="text-align:right;float:right;" class="moreHover">more...</span>
+        </div>
+        <div class="Column interval">
+          <p>會員優惠</p>
+
+          <span style="text-align:right;float:right;" class="moreHover">more...</span>
+        </div>
+        <div class="Column interval">
+        </div>
+      </div>
+      <div class="center">
+
+        <div class="slider">
+          <!-- #region Jssor Slider Begin -->
+          <!-- Generator: Jssor Slider Maker -->
+          <!-- Source: http://www.jssor.com -->
+          <!-- This code works without jquery library. -->
+          <script src="js/jssor.slider-22.1.6.min.js" type="text/javascript"></script>
+          <script type="text/javascript">
+              jssor_1_slider_init = function() {
+
+                  var jssor_1_SlideshowTransitions = [
+                    {$Duration:1200,$Opacity:2}
+                  ];
+
+                  var jssor_1_options = {
+                    $AutoPlay: true,
+                    $SlideshowOptions: {
+                      $Class: $JssorSlideshowRunner$,
+                      $Transitions: jssor_1_SlideshowTransitions,
+                      $TransitionsOrder: 1
+                    },
+                    $ArrowNavigatorOptions: {
+                      $Class: $JssorArrowNavigator$
+                    },
+                    $BulletNavigatorOptions: {
+                      $Class: $JssorBulletNavigator$
+                    }
+                  };
+
+                  var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+                  /*responsive code begin*/
+                  /*you can remove responsive code if you don't want the slider scales while window resizing*/
+                  function ScaleSlider() {
+                      var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                      if (refSize) {
+                          refSize = Math.min(refSize, 600);
+                          jssor_1_slider.$ScaleWidth(refSize);
+                      }
+                      else {
+                          window.setTimeout(ScaleSlider, 30);
+                      }
+                  }
+                  ScaleSlider();
+                  $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                  $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+                  $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                  /*responsive code end*/
+              };
+          </script>
+          <style>
+              /* jssor slider bullet navigator skin 05 css */
+              /*
+              .jssorb05 div           (normal)
+              .jssorb05 div:hover     (normal mouseover)
+              .jssorb05 .av           (active)
+              .jssorb05 .av:hover     (active mouseover)
+              .jssorb05 .dn           (mousedown)
+              */
+              .jssorb05 {
+                  position: absolute;
+              }
+              .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                  position: absolute;
+                  /* size of bullet elment */
+                  width: 16px;
+                  height: 16px;
+                  background: url('img/b05.png') no-repeat;
+                  overflow: hidden;
+                  cursor: pointer;
+              }
+              .jssorb05 div { background-position: -7px -7px; }
+              .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+              .jssorb05 .av { background-position: -67px -7px; }
+              .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+              /* jssor slider arrow navigator skin 12 css */
+              /*
+              .jssora12l                  (normal)
+              .jssora12r                  (normal)
+              .jssora12l:hover            (normal mouseover)
+              .jssora12r:hover            (normal mouseover)
+              .jssora12l.jssora12ldn      (mousedown)
+              .jssora12r.jssora12rdn      (mousedown)
+              */
+              .jssora12l, .jssora12r {
+                  display: block;
+                  position: absolute;
+                  /* size of arrow element */
+                  width: 30px;
+                  height: 46px;
+                  cursor: pointer;
+                  background: url('img/a12.png') no-repeat;
+                  overflow: hidden;
+              }
+              .jssora12l { background-position: -16px -37px; }
+              .jssora12r { background-position: -75px -37px; }
+              .jssora12l:hover { background-position: -136px -37px; }
+              .jssora12r:hover { background-position: -195px -37px; }
+              .jssora12l.jssora12ldn { background-position: -256px -37px; }
+              .jssora12r.jssora12rdn { background-position: -315px -37px; }
+          </style>
+          <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:600px;height:300px;overflow:hidden;visibility:hidden;">
+              <!-- Loading Screen -->
+              <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                  <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                  <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+              </div>
+              <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:600px;height:300px;overflow:hidden;">
+                  <div>
+                      <img data-u="image" src="img/02.jpg" />
+                  </div>
+                  <a data-u="any" href="http://www.jssor.com" style="display:none">Simple Fade Slideshow</a>
+                  <div>
+                      <img data-u="image" src="img/04.jpg" />
+                  </div>
+                  <div>
+                      <img data-u="image" src="img/05.jpg" />
+                  </div>
+                  <div>
+                      <img data-u="image" src="img/09.jpg" />
+                  </div>
+              </div>
+              <!-- Bullet Navigator -->
+              <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+                  <!-- bullet navigator item prototype -->
+                  <div data-u="prototype" style="width:16px;height:16px;"></div>
+              </div>
+              <!-- Arrow Navigator -->
+              <span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
+              <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
+          </div>
+          <script type="text/javascript">jssor_1_slider_init();</script>
+          <!-- #endregion Jssor Slider End -->
+        </div>
+
+        <div class="RWDsearchField">
+          <img src="img/search.png" style="width:15px;"><input type="text" name="search" class="search">
+          <select>
+            <option>中文書</option>
+            <option>日文書</option>
+            <option>畫冊</option>
+            <option>DVD</option>
+            <option>CD</option>
+            <option>模型</option>
+            <option>海報</option>
+            <option>其他周邊</option>
+          </select>
+          <input type="button" value="搜尋">
+        </div>
+
+        <div class="centerColumn">
+          <div class="title">
+            <div class="subject">
+              <p>新品上市</p>
+            </div>
+            <div class="more moreHover">
+              <span>more...</span>
+            </div>
+          </div>
+          <div class="cot">
+            <div class="centerItem">
+              <img src="img/kiminonawaJ.jpg"><br/>
+              <span class="intro">君の名は</span>
+            </div>
+            <a href="homepage/ChineseBook/product01.html">
+            <div class="centerItem">
+              <img src="img/isekai.jpg"><br/>
+              <span class="intro">異世界藥局 01</span>
+            </div>
+            </a>
+            <div class="centerItemE">
+              <img src="img/kiminonawaC.jpg"><br/>
+              <span class="intro">你的名字</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="centerColumn">
+          <div class="title">
+            <div class="subject">
+              <p>新番原文書</p>
+            </div>
+            <div class="more moreHover">
+              <span>more...</span>
+            </div>
+          </div>
+          <div class="cot">
+            <div class="centerItem">
+              <img src="img/kuzuJ.jpg"><br/>
+              <span class="intro">クズの本懐 06</p>
+            </div>
+            <div class="centerItem">
+              <img src="img/kataJ.jpg"><br/>
+              <span class="intro">亜人ちゃんは語りたい 04</p>
+            </div>
+            <div class="centerItemE">
+              <img src="img/konosubaJ.jpg"><br/>
+              <span class="intro">この素晴らしい世界に祝福を 08</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="centerColumn">
+          <div class="title">
+            <div class="subject">
+              <p>新番中文書</p>
+            </div>
+            <div class="more moreHover"><span>more...</span></div>
+          </div>
+          <div class="cot">
+            <div class="centerItem">
+              <img src="img/kuzuC.jpg"><br/>
+              <span class="intro">人渣的本願 06</p>
+            </div>
+            <div class="centerItem">
+              <img src="img/kataC.jpg"><br/>
+              <span class="intro">亞人醬有話要說 04</p>
+            </div>
+            <div class="centerItemE">
+              <img src="img/konosubaC.jpg"><br/>
+              <span class="intro">為美好的世界獻上祝福 08</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="right">
+        <div class="Column">
+          <p>特價區</p>
+
+          <div class="item">
+            <img src="img/kiminonawaC.jpg"><br/>
+            <span class="intro">你的名字</span>
+          </div>
+        </div>
+        <div class="Column interval">
+          <p>熱門排行</p>
+
+          <div class="item">
+            <img src="img/kiminonawaJ.jpg"><br/>
+            <span class="intro">君の名は</span>
+          </div>
+        </div>
+        <div class="Column interval">
+          <p>熱門關鍵字</p>
+          <ul class="keyword">
+            <li><a href="#">你的名字</a></li>
+            <li><a href="#">1月新番</a></li>
+            <li><a href="#">進擊的巨人</a></li>
+            <li><a href="#">聲之形</a></li>
+            <li><a href="#">RE</a></li>
+            <li><a href="#">從零開始的異世界生活</a></li>
+            <li><a href="#">雷姆</a></li>
+            <li><a href="#">拉姆</a></li>
+            <li><a href="#">伊澤塔</a></li>
+            <li><a href="#">芬涅</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="root">
+      <div class="footLogo"><a href="index.html" class="home">Anime</a>
+      </div>
+      <div class="features">
+        <div class="link">
+          <ul>
+            <li><a href="index.html" class="rootLink">首頁</a></li>
+            <li>關於</li>
+            <li>客服中心</li>
+            <li>討論區</li>
+          </ul>
+        </div>
+        <div class="RWDlink">
+          <ul>
+            <li>關於</li>
+            <li>客服中心</li>
+            <li>討論區</li>
+          </ul>
+        </div>
+        <div class="ourInfo">
+          <p>專線：02-23456789</p>
+          <p>地址：台北市中正區濟南路一段321號</p><br/>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:12px;">動漫周邊購物網　&copy;Anime Shopping site.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
